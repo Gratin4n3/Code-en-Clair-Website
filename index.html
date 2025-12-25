@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">  
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="header.js"></script>
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-
-            <!-- Logo -->
-            <div class="header-logo">
-                <a href="/">
-                    <img src="assets/img/white_logo_cec.png" alt="Code en Clair">
-                </a>
-            </div>
-
-            <!-- Navigation principale -->
-            <nav aria-label="Navigation principale">
-                <ul class="nav-list">
-
-                    <li class="nav-item">
-                        <a href="#">Ressources</a>
-
-                        <!-- Bandeau (overlay, contenu plus tard) -->
-                        <div class="nav-panel">
-                            <ul>
-                                <!-- liens plus tard -->
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#">Contact</a>
-
-                        <div class="nav-panel">
-                            <ul>
-                                <!-- liens plus tard -->
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#">À propos</a>
-
-                        <div class="nav-panel">
-                            <ul>
-                                <!-- liens plus tard -->
-                            </ul>
-                        </div>
-                    </li>
-
-                </ul>
-            </nav>
-
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="/">
+            <img src="assets/img/white_logo_cec.png" alt="Code en Clair" />
+          </a>
         </div>
+
+        <!-- Navigation principale -->
+        <nav aria-label="Navigation principale">
+          <ul class="nav-list">
+            <li class="nav-item" data-panel="resources">
+              <a href="#">Ressources</a>
+            </li>
+            <li class="nav-item" data-panel="contact">
+              <a href="#">Contact</a>
+            </li>
+            <li class="nav-item" data-panel="about">
+              <a href="#">À propos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Bandeau GLOBAL du header (contenu plus tard) -->
+      <div class="header-panel">
+        <ul>
+          <li class="panel-item" data-panel="resources">
+            <a href="#">test1</a>
+          </li>
+          <li class="panel-item" data-panel="contact">
+            <a href="#">test2</a>
+          </li>
+          <li class="panel-item" data-panel="about">
+            <a href="#">test3</a>
+          </li>
+        </ul>
+      </div>
     </header>
-</body>
+
+    <main class="page-content">
+    <!-- contenu de la page (hero, sections, etc.) -->
+     <div style="height: 100vh;">
+        <p style="color: white; padding: 40px;">
+            Contenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flouContenu de test pour vérifier le flou
+        </p>
+      </div>
+    </main>
+
+  </body>
 </html>

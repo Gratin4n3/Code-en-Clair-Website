@@ -8,6 +8,8 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* ===== Header ===== */
+
 header {
     position: sticky;
     top: 0;
@@ -15,6 +17,8 @@ header {
 
     height: 80px;
     background-color: #191C20;
+
+    position: relative;
 }
 
 .header-container {
@@ -28,10 +32,14 @@ header {
     justify-content: space-between;
 }
 
+/* Logo */
+
 .header-logo img {
     height: 96px;
     display: block;
 }
+
+/* Navigation */
 
 .nav-list {
     list-style: none;
@@ -42,21 +50,85 @@ header {
     gap: 32px;
 }
 
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
 .nav-item > a {
     font-size: 15px;
     font-weight: 400;
     color: #FFFFFF;
     text-decoration: none;
 
-    display: inline-block;
-}
-
-.nav-item {
     position: relative;
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    transition: opacity 0.2s ease;
 }
 
 .nav-item > a:visited {
     color: #FFFFFF;
+}
+
+.nav-item > a:hover {
+    opacity: 0.85;
+}
+
+/* ===== Bandeau GLOBAL du header ===== */
+
+.header-panel {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 48px 0;
+
+    background-color: #191C20;
+
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Contenu du bandeau */
+.header-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 16px 32px;
+}
+
+.panel-item {
+    display: none;
+}
+
+.panel-item a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.panel-item.is-active {
+    display: block;
+}
+
+/* ===== Page Content ===== */
+/* Préparation du flou du contenu (inactif par défaut) */
+.page-content {
+    transition:
+        filter 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.page-content.is-blurred {
+    filter: blur(4px);
+}
+
+.header-panel.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
